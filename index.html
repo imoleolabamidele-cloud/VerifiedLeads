@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#f8f7f4">
+
+<meta name="description"
+content="Verified Leads connects growing businesses with people who have voluntarily expressed interest in their products and services.">
+
+<title>Verified Leads | Verified Form Leads For Growing Businesses</title>
+
+<!-- International telephone input -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+
+<style>
+
+/* =====================================
+   VERIFIED LEADS
+   GLOBAL DESIGN SYSTEM
+===================================== */
+
+:root {
+    --background: #f8f7f4;
+    --white: #ffffff;
+    --black: #202020;
+    --text: #292929;
+    --muted: #777777;
+    --border: #e8e6e1;
+    --button: #e8e7e3;
+    --button-hover: #dcdad4;
+    --success: #247a51;
+    --danger: #c0392b;
+    --radius: 15px;
+    --shadow: 0 15px 45px rgba(0,0,0,0.055);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(1120px, 91%);
+    margin: auto;
+}
+
+.section {
+    padding: 95px 0;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 39px);
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+    color: var(--black);
+    margin-bottom: 14px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #77736b;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    width: 100%;
+    background: rgba(248,247,244,0.94);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.brand img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    color: var(--black);
+}
+
+.brand-name span {
+    display: block;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #626262;
+    transition: color .2s;
+}
+
+.nav-links a:hover {
+    color: var(--black);
+}
+
+.nav-cta {
+    padding: 11px 19px;
+    background: var(--button);
+    border-radius: 9px;
+    color: var(--black) !important;
+    transition: .2s;
+}
+
+.nav-cta:hover {
+    background: var(--button-hover);
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: var(--black);
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    padding: 105px 0 95px;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 810px;
+    margin: auto;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.65);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    letter-spacing: .7px;
+    margin-bottom: 27px;
+}
+
+.hero-label i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #448b67;
+}
+
+.hero h1 {
+    font-size: clamp(39px, 7vw, 69px);
+    letter-spacing: -3.5px;
+    line-height: 1.08;
+    color: var(--black);
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #77736b;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: auto;
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.primary-button {
+    background: var(--black);
+    color: white;
+}
+
+.primary-button:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: var(--button);
+    color: var(--black);
+}
+
+.secondary-button:hover {
+    background: var(--button-hover);
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    margin-top: 23px;
+    font-size: 11px;
+    color: #898989;
+}
+
+/* =====================================
+   TRUST STRIP
+===================================== */
+
+.trust-strip {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 22px 0;
+    background: rgba(255,255,255,.45);
+}
+
+.trust-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.trust-item {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.trust-item span {
+    color: #77736b;
+    font-size: 16px;
+}
+
+</style>
+</head>
+<style>
+
+/* =====================================
+   HOW IT WORKS
+===================================== */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.step-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 23px;
+    transition: .25s;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    font-size: 12px;
+    font-weight: 800;
+    color: #99948a;
+    margin-bottom: 28px;
+}
+
+.step-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.step-card p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* =====================================
+   PRICING
+===================================== */
+
+.pricing-section {
+    background: #f0efeb;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    align-items: stretch;
+}
+
+.price-card {
+    background: var(--white);
+    border: 1px solid #e8e6e1;
+    border-radius: 16px;
+    padding: 27px 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: .25s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.price-card.featured {
+    border: 1px solid #77736b;
+    box-shadow: 0 12px 35px rgba(0,0,0,.06);
+}
+
+.popular-label {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--black);
+    color: white;
+    padding: 5px 13px;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .7px;
+}
+
+.package-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+.package-price {
+    font-size: 39px;
+    letter-spacing: -2px;
+    font-weight: 800;
+    color: var(--black);
+    line-height: 1.1;
+}
+
+.package-price small {
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #777;
+    font-weight: 500;
+}
+
+.package-description {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.package-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 23px 0;
+}
+
+.package-features {
+    list-style: none;
+    margin-bottom: 25px;
+    flex: 1;
+}
+
+.package-features li {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 13px;
+    display: flex;
+    gap: 9px;
+    line-height: 1.5;
+}
+
+.package-features li span {
+    color: #77736b;
+    font-weight: bold;
+}
+
+.package-button {
+    width: 100%;
+    border: none;
+    background: var(--button);
+    color: var(--black);
+    border-radius: 9px;
+    padding: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.package-button:hover {
+    background: var(--button-hover);
+}
+
+.featured .package-button {
+    background: var(--black);
+    color: white;
+}
+
+.featured .package-button:hover {
+    background: #444;
+}
+
+.pricing-note {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 27px;
+}
+
+/* =====================================
+   CATEGORIES
+===================================== */
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.category-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 21px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.category-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 10px;
+    background: #f1f0ec;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+}
+
+.category-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* =====================================
+   DIFFERENTIATORS
+===================================== */
+
+.difference-section {
+    background: #f0efeb;
+}
+
+.difference-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.difference-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 27px;
+}
+
+.difference-card h3 {
+    font-size: 15px;
+    margin-bottom: 9px;
+    color: var(--black);
+}
+
+.difference-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   FAQ
+===================================== */
+
+.faq-list {
+    max-width: 760px;
+    margin: auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.faq-question span {
+    font-size: 20px;
+    color: #777;
+    transition: transform .2s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 20px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* =====================================
+   FINAL CTA
+===================================== */
+
+.final-cta {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+.final-cta h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: -1.5px;
+    margin-bottom: 13px;
+}
+
+.final-cta p {
+    color: #bcbcbc;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.final-cta .secondary-button {
+    background: white;
+    color: var(--black);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    padding: 55px 0 25px;
+    background: #f8f7f4;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-brand {
+    max-width: 330px;
+}
+
+.footer-brand p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 15px;
+    line-height: 1.9;
+}
+
+.footer-links h4 {
+    font-size: 12px;
+    margin-bottom: 14px;
+    color: var(--black);
+}
+
+.footer-links a {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--black);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-top: 23px;
+    font-size: 10px;
+    color: #888;
+}
+
+/* =====================================
+   ORDER MODAL
+===================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(20,20,20,.56);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.order-modal {
+    background: white;
+    width: min(610px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 17px;
+    box-shadow: 0 25px 90px rgba(0,0,0,.2);
+    animation: modalIn .25s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    padding: 25px 27px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.modal-header h2 {
+    font-size: 21px;
+    letter-spacing: -.5px;
+    color: var(--black);
+}
+
+.modal-header p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.modal-close {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background: #f0efeb;
+    font-size: 19px;
+    color: #444;
+}
+
+.modal-body {
+    padding: 25px 27px 30px;
+}
+
+</style>
+<style>
+
+/* =====================================
+   FORM DESIGN
+===================================== */
+
+.form-section-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--black);
+    margin-bottom: 17px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #343434;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #b64a3b;
+    margin-left: 3px;
+}
+
+.optional {
+    color: #888;
+    font-weight: 400;
+    margin-left: 4px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    border: 1px solid #deddd8;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--black);
+    padding: 12px 13px;
+    font-size: 12px;
+    outline: none;
+    transition: border .2s, box-shadow .2s;
+}
+
+.form-control:focus {
+    border-color: #77736b;
+    box-shadow: 0 0 0 3px rgba(119,115,107,.10);
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+textarea.form-control {
+    min-height: 105px;
+    resize: vertical;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+.field-hint {
+    color: #929292;
+    font-size: 10px;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+.hidden-field {
+    display: none;
+}
+
+.hidden-field.visible {
+    display: block;
+}
+
+.iti {
+    width: 100%;
+}
+
+.iti input {
+    width: 100%;
+}
+
+.iti__country-list {
+    max-width: min(350px, 80vw);
+    font-size: 12px;
+}
+
+.order-summary {
+    background: #f6f5f2;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 17px;
+    margin: 23px 0;
+}
+
+.order-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    margin-bottom: 9px;
+    color: #777;
+}
+
+.order-summary-row strong {
+    color: var(--black);
+}
+
+.order-summary-row.total {
+    border-top: 1px solid #e2e0da;
+    padding-top: 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.order-summary-row.total strong {
+    font-size: 19px;
+}
+
+.consent-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 10px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.consent-box input {
+    margin-top: 4px;
+    accent-color: #333;
+}
+
+.consent-box a {
+    text-decoration: underline;
+}
+
+.submit-order {
+    width: 100%;
+    min-height: 49px;
+    border: none;
+    border-radius: 9px;
+    background: var(--black);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.submit-order:hover {
+    background: #444;
+}
+
+.submit-order:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    display: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    margin-top: 13px;
+    line-height: 1.7;
+}
+
+.form-message.error {
+    display: block;
+    color: #9f3028;
+    background: #fff0ee;
+}
+
+.form-message.success {
+    display: block;
+    color: #226744;
+    background: #eaf7ef;
+}
+
+.modal-footnote {
+    font-size: 10px;
+    color: #999;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: var(--background);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 5%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 17px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 7px 0;
+    }
+
+    .nav-cta {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .trust-items {
+        gap: 18px;
+        justify-content: flex-start;
+    }
+
+    .trust-item {
+        font-size: 10px;
+    }
+
+    .steps-grid {
+        gap: 11px;
+    }
+
+    .step-card {
+        padding: 20px 15px;
+    }
+
+    .pricing-grid {
+        gap: 12px;
+    }
+
+    .price-card {
+        padding: 23px 15px;
+    }
+
+    .package-price {
+        font-size: 32px;
+    }
+
+    .package-features li {
+        font-size: 10px;
+    }
+
+    .categories-grid {
+        gap: 10px;
+    }
+
+    .category-card {
+        padding: 14px 11px;
+        gap: 9px;
+    }
+
+    .category-card h3 {
+        font-size: 10px;
+    }
+
+    .category-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        flex-shrink: 0;
+    }
+
+    .difference-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .order-modal {
+        width: 100%;
+        max-height: 94vh;
+        border-radius: 17px 17px 0 0;
+    }
+
+    .modal-header,
+    .modal-body {
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+
+}
+
+@media (max-width: 370px) {
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+<body>
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+
+            <img src="logo.png"
+                 alt="Verified Leads logo">
+
+            <div class="brand-name">
+                VERIFIED LEADS
+                <span>Growth through genuine interest</span>
+            </div>
+
+        </a>
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+
+            <a href="#how-it-works">How It Works</a>
+
+            <a href="#pricing">Pricing</a>
+
+            <a href="#faq">FAQ</a>
+
+            <a href="#pricing" class="nav-cta">
+                Get Started
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            <i></i>
+            LEAD GENERATION FOR GROWING BUSINESSES
+        </div>
+
+        <h1>
+            Connect with people<br>
+            <span>interested in what you offer.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Stop relying on guesswork to find potential customers.
+
+            Verified Leads helps businesses connect with people
+            who have voluntarily expressed interest in products
+            and services across different industries.
+
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#pricing" class="primary-button">
+                Explore Packages
+            </a>
+
+            <a href="#how-it-works" class="secondary-button">
+                How It Works
+            </a>
+
+        </div>
+
+        <p class="hero-note">
+            One-time payments · No monthly subscriptions
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     TRUST STRIP
+===================================== -->
+
+<section class="trust-strip">
+
+    <div class="container trust-items">
+
+        <div class="trust-item">
+            <span>✓</span> Voluntary form submissions
+        </div>
+
+        <div class="trust-item">
+            <span>✓</span> Relevant customer interests
+        </div>
+
+        <div class="trust-item">
+            <span>✓</span> Organised lead delivery
+        </div>
+
+        <div class="trust-item">
+            <span>✓</span> One-time payments
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     HOW IT WORKS
+===================================== -->
+
+<section class="section" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">A SIMPLE PROCESS</span>
+
+            <h2>
+                Getting started is straightforward.
+            </h2>
+
+            <p>
+                Four simple steps to get your lead-generation
+                order underway.
+            </p>
+
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+
+                <div class="step-number">01 / CHOOSE</div>
+
+                <h3>Choose Your Package</h3>
+
+                <p>
+                    Select the lead package that best suits
+                    your business requirements and budget.
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">02 / SUBMIT</div>
+
+                <h3>Tell Us About Your Business</h3>
+
+                <p>
+                    Complete the short order form with your
+                    business details and product information.
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">03 / PAYMENT</div>
+
+                <h3>Complete Payment</h3>
+
+                <p>
+                    Review your order and continue to our
+                    secure hosted payment checkout.
+                </p>
+
+            </div>
+
+            <div class="step-card">
+
+                <div class="step-number">04 / DELIVERY</div>
+
+                <h3>Receive Your Leads</h3>
+
+                <p>
+                    Your order enters the delivery process
+                    after successful payment verification.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     PRICING
+===================================== -->
+
+<section class="section pricing-section" id="pricing">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">SIMPLE, TRANSPARENT PRICING</span>
+
+            <h2>
+                Choose the package for your business.
+            </h2>
+
+            <p>
+                Every package is a one-time purchase.
+                Choose the volume that works for your needs.
+            </p>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- TRIAL -->
+
+            <article class="price-card">
+
+                <div class="package-name">TRIAL</div>
+
+                <div class="package-price">$29</div>
+
+                <p class="package-description">
+                    A simple way to get started.
+                </p>
+
+                <div class="package-divider"></div>
+
+                <ul class="package-features">
+
+                    <li>
+                        <span>✓</span> 25 verified form leads
+                    </li>
+
+                    <li>
+                        <span>✓</span> Contact information
+                    </li>
+
+                    <li>
+                        <span>✓</span> Interest context
+                    </li>
+
+                    <li>
+                        <span>✓</span> Budget information
+                    </li>
+
+                    <li>
+                        <span>✓</span> 48-hour delivery
+                    </li>
+
+                </ul>
+
+                <button class="package-button order-button"
+                        data-package="Trial"
+                        data-amount="29"
+                        data-leads="25">
+
+                    Order Now
+
+                </button>
+
+            </article>
+
+
+            <!-- STANDARD -->
+
+            <article class="price-card">
+
+                <div class="package-name">STANDARD</div>
+
+                <div class="package-price">$49</div>
+
+                <p class="package-description">
+                    For businesses ready to grow.
+                </p>
+
+                <div class="package-divider"></div>
+
+                <ul class="package-features">
+
+                    <li>
+                        <span>✓</span> 50 verified form leads
+                    </li>
+
+                    <li>
+                        <span>✓</span> Contact information
+                    </li>
+
+                    <li>
+                        <span>✓</span> Interest context
+                    </li>
+
+                    <li>
+                        <span>✓</span> Budget information
+                    </li>
+
+                    <li>
+                        <span>✓</span> 48-hour delivery
+                    </li>
+
+                </ul>
+
+                <button class="package-button order-button"
+                        data-package="Standard"
+                        data-amount="49"
+                        data-leads="50">
+
+                    Order Now
+
+                </button>
+
+            </article>
+
+
+            <!-- PROFESSIONAL -->
+
+            <article class="price-card featured">
+
+                <div class="popular-label">
+                    MOST POPULAR
+                </div>
+
+                <div class="package-name">PROFESSIONAL</div>
+
+                <div class="package-price">$99</div>
+
+                <p class="package-description">
+                    More opportunities for growth.
+                </p>
+
+                <div class="package-divider"></div>
+
+                <ul class="package-features">
+
+                    <li>
+                        <span>✓</span> 100 verified form leads
+                    </li>
+
+                    <li>
+                        <span>✓</span> Contact information
+                    </li>
+
+                    <li>
+                        <span>✓</span> Interest context
+                    </li>
+
+                    <li>
+                        <span>✓</span> Budget information
+                    </li>
+
+                    <li>
+                        <span>✓</span> 72-hour delivery
+                    </li>
+
+                </ul>
+
+                <button class="package-button order-button"
+                        data-package="Professional"
+                        data-amount="99"
+                        data-leads="100">
+
+                    Order Now
+
+                </button>
+
+            </article>
+
+
+            <!-- ENTERPRISE -->
+
+            <article class="price-card">
+
+                <div class="package-name">ENTERPRISE</div>
+
+                <div class="package-price">$399</div>
+
+                <p class="package-description">
+                    For larger lead requirements.
+                </p>
+
+                <div class="package-divider"></div>
+
+                <ul class="package-features">
+
+                    <li>
+                        <span>✓</span> 500 verified form leads
+                    </li>
+
+                    <li>
+                        <span>✓</span> Contact information
+                    </li>
+
+                    <li>
+                        <span>✓</span> Interest context
+                    </li>
+
+                    <li>
+                        <span>✓</span> Budget information
+                    </li>
+
+                    <li>
+                        <span>✓</span> 72-hour delivery
+                    </li>
+
+                </ul>
+
+                <button class="package-button order-button"
+                        data-package="Enterprise"
+                        data-amount="399"
+                        data-leads="500">
+
+                    Order Now
+
+                </button>
+
+            </article>
+
+        </div>
+
+        <p class="pricing-note">
+            All package prices are displayed in USD ($).
+            Delivery timelines begin after payment verification
+            and order acceptance.
+        </p>
+
+    </div>
+
+</section>
+<!-- =====================================
+     BUSINESS CATEGORIES
+===================================== -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">INDUSTRIES WE SUPPORT</span>
+
+            <h2>
+                Built for different types of businesses.
+            </h2>
+
+            <p>
+                Tell us what your business offers when
+                submitting your order.
+            </p>
+
+        </div>
+
+        <div class="categories-grid">
+
+            <div class="category-card">
+                <div class="category-icon">✦</div>
+                <h3>Beauty & Fashion</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">◈</div>
+                <h3>Financial Services</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">✈</div>
+                <h3>Travel & Immigration</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">♡</div>
+                <h3>Health & Wellness</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">⌂</div>
+                <h3>Real Estate & Property</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">⌘</div>
+                <h3>Technology & Digital Services</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">▤</div>
+                <h3>Education & Training</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">◇</div>
+                <h3>Professional Services</h3>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">＋</div>
+                <h3>Other Industries</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     DIFFERENTIATORS
+===================================== -->
+
+<section class="section difference-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">OUR APPROACH</span>
+
+            <h2>
+                More context. Better conversations.
+            </h2>
+
+            <p>
+                Useful information helps businesses understand
+                the people expressing interest in their offers.
+            </p>
+
+        </div>
+
+        <div class="difference-grid">
+
+            <div class="difference-card">
+
+                <h3>Voluntary Form Submissions</h3>
+
+                <p>
+                    Lead information comes from people who
+                    voluntarily submit forms expressing interest
+                    in relevant products or services.
+                </p>
+
+            </div>
+
+            <div class="difference-card">
+
+                <h3>Relevant Business Context</h3>
+
+                <p>
+                    Lead records are organised around the
+                    interests and information collected through
+                    the relevant campaign.
+                </p>
+
+            </div>
+
+            <div class="difference-card">
+
+                <h3>Organised Delivery</h3>
+
+                <p>
+                    Your purchased leads are organised to make
+                    reviewing and following up more convenient.
+                </p>
+
+            </div>
+
+            <div class="difference-card">
+
+                <h3>Transparent Service</h3>
+
+                <p>
+                    We provide marketing leads, not guaranteed
+                    sales. Results depend on your offer, market,
+                    pricing and follow-up.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FAQ
+===================================== -->
+
+<section class="section" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+
+            <h2>
+                Questions? We've got answers.
+            </h2>
+
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What are Verified Leads?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Verified Leads provides lead-generation
+                    services using voluntary form submissions
+                    from people expressing interest in relevant
+                    products and services. Verification checks
+                    are applied according to the campaign.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Do you guarantee sales?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    No. We provide marketing leads, not guaranteed
+                    sales. Your results depend on your product,
+                    pricing, market and follow-up process.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    How long does delivery take?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Trial and Standard packages have a 48-hour
+                    delivery timeline. Professional and Enterprise
+                    packages have a 72-hour delivery timeline.
+                    Timelines begin after payment verification
+                    and order acceptance.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Are payments recurring?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    No. Every package is a one-time purchase.
+                    There are no monthly subscriptions.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Can I order for another industry?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Yes. Select Other in the business category
+                    field and specify your industry in the
+                    additional field.
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    How is customer information handled?
+                    <span>+</span>
+                </button>
+
+                <div class="faq-answer">
+                    Lead information should only be collected
+                    and shared with appropriate consent.
+                    Our lead-generation process is intended
+                    for relevant business follow-up, subject
+                    to our privacy policy and applicable laws.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FINAL CALL TO ACTION
+===================================== -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to grow your business?
+        </h2>
+
+        <p>
+            Choose your package and tell us what your
+            business needs.
+        </p>
+
+        <a href="#pricing" class="secondary-button">
+            View Packages
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <a href="#home" class="brand">
+
+                    <img src="logo.png"
+                         alt="Verified Leads logo">
+
+                    <div class="brand-name">
+                        VERIFIED LEADS
+                        <span>Verified Form Leads For Growing Businesses</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Helping businesses connect with people
+                    who have voluntarily expressed interest
+                    in products and services.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Explore</h4>
+
+                <a href="#home">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Information</h4>
+
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="currentYear">2026</span>
+                Verified Leads. All rights reserved.
+            </span>
+
+            <span>
+                All package prices are in USD ($).
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================
+     ORDER FORM MODAL
+===================================== -->
+
+<div class="modal-overlay"
+     id="orderModal"
+     aria-hidden="true">
+
+    <div class="order-modal"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitle">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2 id="modalTitle">
+                    Let's get your business started.
+                </h2>
+
+                <p>
+                    Complete your business details to continue
+                    with your order.
+                </p>
+
+            </div>
+
+            <button type="button"
+                    class="modal-close"
+                    id="closeModal"
+                    aria-label="Close order form">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <form id="orderForm">
+
+                <div class="form-section-title">
+                    YOUR BUSINESS DETAILS
+                </div>
+
+
+                <!-- PACKAGE -->
+
+                <input type="hidden"
+                       id="selectedPackage"
+                       name="package_name">
+
+                <input type="hidden"
+                       id="selectedAmount"
+                       name="amount">
+
+                <input type="hidden"
+                       id="selectedLeads"
+                       name="lead_quantity">
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="businessCategory">
+                        Business Category
+                        <span class="required">*</span>
+                    </label>
+
+                    <select class="form-control"
+                            id="businessCategory"
+                            name="business_category"
+                            required>
+
+                        <option value="">
+                            Select your business category
+                        </option>
+
+                        <option>Beauty & Fashion</option>
+
+                        <option>Financial Services</option>
+
+                        <option>Travel & Immigration</option>
+
+                        <option>Health & Wellness</option>
+
+                        <option>Real Estate & Property</option>
+
+                        <option>Technology & Digital Services</option>
+
+                        <option>Education & Training</option>
+
+                        <option>Professional Services</option>
+
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- OTHER CATEGORY -->
+
+                <div class="form-group hidden-field"
+                     id="otherCategoryGroup">
+
+                    <label for="otherCategory">
+                        Specify Your Business Category
+                        <span class="required">*</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="otherCategory"
+                           name="other_category"
+                           type="text"
+                           maxlength="100"
+                           placeholder="Enter your business category">
+
+                </div>
+
+
+                <!-- BUSINESS NAME -->
+
+                <div class="form-group">
+
+                    <label for="businessName">
+                        Business Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="businessName"
+                           name="business_name"
+                           type="text"
+                           maxlength="150"
+                           placeholder="Enter your business name"
+                           required>
+
+                </div>
+
+
+                <!-- CONTACT PERSON -->
+
+                <div class="form-group">
+
+                    <label for="contactName">
+                        Contact Person – Full Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="contactName"
+                           name="contact_name"
+                           type="text"
+                           maxlength="150"
+                           autocomplete="name"
+                           placeholder="Enter your full name"
+                           required>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phoneNumber">
+                        Contact – Phone Number
+                        <span class="required">*</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="phoneNumber"
+                           name="whatsapp_number"
+                           type="tel"
+                           autocomplete="tel"
+                           placeholder="Enter your phone number"
+                           required>
+
+                    <p class="field-hint">
+                        Select your country to automatically
+                        include its international calling code.
+                    </p>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="businessEmail">
+                        Business Email
+                        <span class="optional">(Optional)</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="businessEmail"
+                           name="business_email"
+                           type="email"
+                           maxlength="254"
+                           autocomplete="email"
+                           placeholder="you@yourbusiness.com">
+
+                </div>
+
+
+                <!-- BUSINESS LINK -->
+
+                <div class="form-group">
+
+                    <label for="businessLink">
+                        Business Link
+                        <span class="optional">(Optional)</span>
+                    </label>
+
+                    <input class="form-control"
+                           id="businessLink"
+                           name="business_link"
+                           type="url"
+                           maxlength="500"
+                           placeholder="https://instagram.com/yourstore">
+
+                    <p class="field-hint">
+                        Instagram, TikTok, website or WhatsApp link.
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="productDescription">
+                        Product / Service Description + Price
+                        <span class="required">*</span>
+                    </label>
+
+                    <textarea class="form-control"
+                              id="productDescription"
+                              name="product_description"
+                              maxlength="2000"
+                              placeholder="Example: Luxury hair extensions, $180, delivery to Lekki."
+                              required></textarea>
+
+                    <p class="field-hint">
+                        Describe what you sell or offer, including
+                        its price and any important details.
+                    </p>
+
+                </div>
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="order-summary">
+
+                    <div class="order-summary-row">
+
+                        <span>Selected Package</span>
+
+                        <strong id="summaryPackage">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div class="order-summary-row">
+
+                        <span>Lead Quantity</span>
+
+                        <strong id="summaryLeads">
+                            —
+                        </strong>
+
+                    </div>
+
+                    <div class="order-summary-row">
+
+                        <span>Delivery Timeline</span>
+
+                        <strong id="summaryDelivery">
+                            —
+                        </strong>
+
+                    </div>
+
+                    <div class="order-summary-row total">
+
+                        <span>Total Payment</span>
+
+                        <strong id="summaryAmount">
+                            $0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONSENT -->
+
+                <label class="consent-box">
+
+                    <input type="checkbox"
+                           id="consent"
+                           name="consent_given"
+                           required>
+
+                    <span>
+                        I confirm that the business information
+                        provided is accurate. I understand that
+                        Verified Leads provides marketing leads,
+                        not guaranteed sales. I agree to the
+                        <a href="terms.html" target="_blank">
+                            Terms & Conditions
+                        </a>
+                        and acknowledge the
+                        <a href="privacy.html" target="_blank">
+                            Privacy Policy
+                        </a>.
+                    </span>
+
+                </label>
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit"
+                        class="submit-order"
+                        id="submitOrder">
+
+                    Continue to Secure Checkout
+
+                </button>
+
+
+                <div class="form-message"
+                     id="formMessage"
+                     role="status"
+                     aria-live="polite">
+                </div>
+
+                <p class="modal-footnote">
+                    Your order will only be confirmed after
+                    successful payment verification.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================
+     JAVASCRIPT LIBRARIES
+===================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+
+<!-- Supabase JavaScript client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- International telephone input -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+
+<!-- Verified Leads application logic -->
+<script src="app.js"></script>
+
+</body>
+</html>
